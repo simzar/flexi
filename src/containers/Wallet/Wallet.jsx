@@ -74,7 +74,6 @@ export default () => {
   const [data, setData] = useState(initialData);
 
   useEffect(() => {
-    
     const interval = setInterval(() => {
       const newData = [
         ...data,
@@ -83,10 +82,11 @@ export default () => {
           price: prices[idx],
         },
       ];
+
       setData(newData.slice(-10));
       setIdx((idx + 1) % 24);
-    }, 1000);
-    
+    }, 2000);
+
     return () => clearInterval(interval);
   }, [data, idx]);
 
