@@ -1,28 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PrettyButton from './components/Button';
 import Menu from './components/Menu';
+import Card from './components/Card';
+import LineChart from './components/LineChart';
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <Menu />
-        <img src={logo} className='App-logo' alt='logo' />
-        <PrettyButton />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Card header='Turimi FlexiCoin:' text={520} />
+      <Card header='Gaunami FlexiCoin už 1kWh:' text={17} />
+      <Card header='FlexiCoin kainos istorija' text={<LineChart />} />
     </div>
   );
 }
