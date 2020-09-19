@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     margin: '3rem auto',
-    minWidth: 275,
     width: '50%',
   },
   bullet: {
