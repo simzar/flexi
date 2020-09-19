@@ -25,7 +25,7 @@ function App() {
   return (
     <div className='App'>
       <Menu />
-      {/*<Wallet />*/}
+      <Wallet />
       <Prizes prizes={prizes} />
     </div>
   );

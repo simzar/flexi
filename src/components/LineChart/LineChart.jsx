@@ -1,34 +1,43 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Paper from '@material-ui/core/Paper';
-import { ArgumentAxis, ValueAxis, Chart, LineSeries } from '@devexpress/dx-react-chart-material-ui';
-import { makeStyles } from '@material-ui/core/styles';
+import {
+  Chart,
+  ArgumentAxis,
+  ValueAxis,
+  LineSeries,
+  Title,
+} from '@devexpress/dx-react-chart-material-ui';
+import { Animation } from '@devexpress/dx-react-chart';
+import { line, curveStep } from 'd3-shape';
 
-const data = [
-  { argument: 1, value: 10 },
-  { argument: 2, value: 20 },
-  { argument: 3, value: 30 },
-];
+const Line = (props) => (
+  <LineSeries.Path
+    {...props}
+    path={line()
+      .x(({ arg }) => arg)
+      .y(({ val }) => val)
+      .curve(curveStep)}
+  />
+);
 
-const useStyles = makeStyles({
-  chartWrapper: {
-    margin: '1rem auto',
-    width: '50%',
-  },
-});
+const format = () => (tick) => tick;
 
-export default () => {
-  const classes = useStyles();
+const LineChart = (props) => (
+  <Paper>
+    <Chart data={props.data}>
+      <ArgumentAxis tickFormat={format} />
+      <ValueAxis />
+      <LineSeries
+        name='FlexiCoin kaina'
+        valueField='price'
+        argumentField='hour'
+        color='#cd7f32'
+        seriesComponent={Line}
+      />
+      <Title text='FlexiCoin kainos istorija' />
+      <Animation />
+    </Chart>
+  </Paper>
+);
 
-  return (
-    <div className={classes.chartWrapper}>
-      <Paper>
-        <Chart data={data}>
-          <ArgumentAxis />
-          <ValueAxis />
-
-          <LineSeries valueField='value' argumentField='argument' />
-        </Chart>
-      </Paper>
-    </div>
-  );
-};
+export default memo(LineChart);
