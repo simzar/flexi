@@ -35,7 +35,7 @@ const prices = [
   10,
   12,
   14,
-  16,
+  12,
   14,
   12,
   10,
@@ -43,8 +43,8 @@ const prices = [
   8,
   7,
   11,
-  18,
-  17,
+  14,
+  15,
   14,
   15,
   12,
@@ -96,7 +96,13 @@ export default () => {
       />
       <Card
         header='Gaunami FlexiCoin už 1kWh:'
-        text={<Chip avatar={<Avatar>17</Avatar>} label='Flexicoin' color='primary' />}
+        text={
+          <Chip
+            avatar={<Avatar>{data[data.length - 1].price}</Avatar>}
+            label='Flexicoin'
+            color='primary'
+          />
+        }
       />
       <div>
         <LineChart data={data} />
