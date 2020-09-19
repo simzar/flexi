@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import {
   Chart,
@@ -21,4 +21,4 @@ const LineChart = (props) => (
   </Paper>
 );
 
-export default memo(LineChart);
+export default LineChart;

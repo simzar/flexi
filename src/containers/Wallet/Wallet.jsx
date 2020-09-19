@@ -82,7 +82,7 @@ export default () => {
           price: prices[idx],
         },
       ];
-      setData(newData);
+      setData(newData.slice(-24));
       setIdx((idx + 1) % 24);
     }, 1000);
     return () => clearInterval(interval);
