@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/flexitis/static/css/main.9900741b.chunk.css",
+    "main.js": "/flexitis/static/js/main.09a522ee.chunk.js",
+    "main.js.map": "/flexitis/static/js/main.09a522ee.chunk.js.map",
+    "runtime-main.js": "/flexitis/static/js/runtime-main.9602f5b1.js",
+    "runtime-main.js.map": "/flexitis/static/js/runtime-main.9602f5b1.js.map",
+    "static/js/2.3f682a3d.chunk.js": "/flexitis/static/js/2.3f682a3d.chunk.js",
+    "static/js/2.3f682a3d.chunk.js.map": "/flexitis/static/js/2.3f682a3d.chunk.js.map",
+    "index.html": "/flexitis/index.html",
+    "precache-manifest.df95943fb65d8b76be599a2b489ebb62.js": "/flexitis/precache-manifest.df95943fb65d8b76be599a2b489ebb62.js",
+    "service-worker.js": "/flexitis/service-worker.js",
+    "static/css/main.9900741b.chunk.css.map": "/flexitis/static/css/main.9900741b.chunk.css.map",
+    "static/js/2.3f682a3d.chunk.js.LICENSE.txt": "/flexitis/static/js/2.3f682a3d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/flexitis/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9602f5b1.js",
+    "static/js/2.3f682a3d.chunk.js",
+    "static/css/main.9900741b.chunk.css",
+    "static/js/main.09a522ee.chunk.js"
+  ]
+}
