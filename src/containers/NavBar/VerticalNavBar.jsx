@@ -50,6 +50,10 @@ const VerticalNavBar = () => {
         <Link to='/prizes'>
           <Tab label='Prizes' {...a11yProps(1)} />
         </Link>
+
+        <Link to='/devices'>
+          <Tab label='Devices' {...a11yProps(1)} />
+        </Link>
       </Tabs>
     </div>
   );
