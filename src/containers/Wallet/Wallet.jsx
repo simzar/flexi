@@ -101,11 +101,17 @@ const initialData = [
   },
 ];
 
+const currentConsumption = () => {
+  return JSON.parse(window.sessionStorage.getItem('devices'))
+    .filter((d) => d.isOn)
+    .map((d) => d.consumption)
+    .reduce((a, b) => a + b, 0);
+};
+
 export default () => {
   const [idx, setIdx] = useState(22);
   const [data, setData] = useState(initialData);
-  const [balance, setBalance] = useState(17);
-  const [consumption] = useState(10);
+  const [balance, setBalance] = useState(500);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -146,7 +152,8 @@ export default () => {
       />
       <Card
         header='Current consumption'
-        text={<Chip avatar={<Avatar>{consumption}</Avatar>} label='kWh' color='primary' />}
+        color='primary'
+        text={<Chip avatar={<Avatar>{currentConsumption()}</Avatar>} label='kWh' color='primary' />}
       />
       <div>
         <LineChart data={data} />
