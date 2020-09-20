@@ -6,13 +6,10 @@ import {
   Series,
   ArgumentAxis,
   CommonSeriesSettings,
-  Export,
   Legend,
   Margin,
   Point,
-  SeriesTemplate,
   Label,
-  Format,
   Connector,
   //from: https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Area/React/Light/
 } from 'devextreme-react/chart';
