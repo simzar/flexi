@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import logo from './../../icons/flexitis_logo.png';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'absolute',
@@ -37,8 +39,10 @@ export default function Menu(props) {
           >
             <MenuIcon />
           </IconButton>
+
+          <img src={logo} width='40px' alt='Logo' />
           <Typography variant='h6' className={classes.title}>
-            Flexitis
+            <span>Flexitis</span>
           </Typography>
         </Toolbar>
       </AppBar>
