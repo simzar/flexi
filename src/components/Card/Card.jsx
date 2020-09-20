@@ -1,14 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    margin: '3rem auto',
-    width: '50%',
+    margin: '1rem auto',
+    width: '90%',
+    padding: 0,
   },
   bullet: {
     display: 'inline-block',
@@ -21,23 +21,31 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  text: {
+    height: '85%',
+  },
+  header: {
+    margin: 'auto 0',
+    fontSize: '15px',
+  },
 });
 
 export default function PrettyCard(props) {
-  const { header, text, actions = null } = props;
+  const { header, text } = props;
   const classes = useStyles();
 
   return (
     <Card className={classes.root} variant='outlined'>
       <CardContent>
-        <Typography variant='h5' component='h2'>
-          {header}
-        </Typography>
-        <Typography variant='body2' component='p'>
-          {text}
+        <Typography variant='h6' component='span' className={classes.wrapper}>
+          <span className={classes.header}>{header}</span>
+          <span className={classes.text}>{text}</span>
         </Typography>
       </CardContent>
-      {actions && <CardActions>{actions}</CardActions>}
     </Card>
   );
 }

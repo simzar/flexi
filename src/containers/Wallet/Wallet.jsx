@@ -67,10 +67,42 @@ const initialData = [
     hour: '13:00',
     price: 11,
   },
+  {
+    hour: '14:00',
+    price: 7,
+  },
+  {
+    hour: '15:00',
+    price: 6,
+  },
+  {
+    hour: '16:00',
+    price: 6,
+  },
+  {
+    hour: '17:00',
+    price: 8,
+  },
+  {
+    hour: '18:00',
+    price: 10,
+  },
+  {
+    hour: '19:00',
+    price: 8,
+  },
+  {
+    hour: '20:00',
+    price: 5,
+  },
+  {
+    hour: '21:00',
+    price: 3,
+  },
 ];
 
 export default () => {
-  const [idx, setIdx] = useState(14);
+  const [idx, setIdx] = useState(22);
   const [data, setData] = useState(initialData);
 
   useEffect(() => {
@@ -93,15 +125,15 @@ export default () => {
   return (
     <>
       <Card
-        header='Turimi FlexiCoin:'
+        header='Balance'
         text={<Chip avatar={<Avatar>520</Avatar>} label='Flexicoin' color='primary' />}
       />
       <Card
-        header='Gaunami FlexiCoin už 1kWh:'
+        header='Rate per 1kWh'
         text={
           <Chip
             avatar={<Avatar>{data[data.length - 1].price}</Avatar>}
-            label='Flexicoin'
+            label='FlexiCoin'
             color='primary'
           />
         }

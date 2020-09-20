@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiCardContent-root {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.MuiChip-colorPrimary {
+  height: 40px !important;
+}
+
+.MuiAvatar-colorDefault,
+.MuiChip-label,
+text {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+.MuiChip-label,
+text {
+  font-weight: 500 !important;
+}
+
+.dxc-title > text {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
