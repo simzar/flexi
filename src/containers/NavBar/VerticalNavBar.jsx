@@ -4,28 +4,34 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { Link } from 'react-router-dom';
 
-const a11yProps = (index) => {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
-  };
-};
+import AccountBalanceWalletTwoToneIcon from '@material-ui/icons/AccountBalanceWalletTwoTone';
+import StorefrontTwoToneIcon from '@material-ui/icons/StorefrontTwoTone';
+import RadioTwoToneIcon from '@material-ui/icons/RadioTwoTone';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    position: 'absolute',
+    position: 'fixed',
     height: '100%',
-    width: '80%',
+    width: '60%',
     zIndex: 10,
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
     width: '100%',
+    height: '100%',
+    textAlign: 'center',
   },
 }));
+
+const a11yProps = (index) => {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+};
 
 const VerticalNavBar = (props) => {
   const classes = useStyles();
@@ -46,13 +52,16 @@ const VerticalNavBar = (props) => {
         className={classes.tabs}
       >
         <Link to='/wallet' onClick={props.onClick}>
+          <AccountBalanceWalletTwoToneIcon />
           <Tab label='Wallet' {...a11yProps(0)} />
         </Link>
-        <Link to='/prizes' onClick={props.onClick}>
-          <Tab label='Prizes' {...a11yProps(1)} />
-        </Link>
         <Link to='/devices' onClick={props.onClick}>
+          <RadioTwoToneIcon />
           <Tab label='Devices' {...a11yProps(1)} />
+        </Link>
+        <Link to='/prizes' onClick={props.onClick}>
+          <StorefrontTwoToneIcon />
+          <Tab label='Prizes' {...a11yProps(1)} />
         </Link>
       </Tabs>
     </div>
