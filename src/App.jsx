@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import VerticalNavBar from './containers/NavBar/VerticalNavBar';
@@ -8,11 +8,13 @@ import Prizes from './containers/Prizes';
 
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className='App'>
-      <Menu />
-      <VerticalNavBar />
+      <Menu onClick={() => setIsMenuOpen(!isMenuOpen)} />
+      {isMenuOpen && <VerticalNavBar />}
 
       <Switch>
         <Route exact path='/'>
@@ -23,6 +25,6 @@ function App() {
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
