@@ -71,6 +71,10 @@ text {
   width: 50px !important;
 }
 
+#linksWrapper {
+  width: 100%;
+}
+
 #linksWrapper .MuiTabs-flexContainerVertical > a {
   display: flex;
 }
