@@ -21,6 +21,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  iconWrapper: {
+    display: 'flex',
+    margin: 'auto',
+    paddingRight: '30px',
+  },
+  titleText: {
+    marginLeft: '3px',
+  },
 }));
 
 export default function Menu(props) {
@@ -39,11 +47,12 @@ export default function Menu(props) {
           >
             <MenuIcon />
           </IconButton>
-
-          <img src={logo} width='40px' alt='Logo' />
-          <Typography variant='h6' className={classes.title}>
-            <span>Flexitis</span>
-          </Typography>
+          <span className={classes.iconWrapper}>
+            <img src={logo} width='30px' alt='Logo' />
+            <Typography variant='h6' className={classes.title}>
+              <span className={classes.titleText}>Flexitis</span>
+            </Typography>
+          </span>
         </Toolbar>
       </AppBar>
     </div>
