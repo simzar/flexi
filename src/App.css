@@ -66,3 +66,7 @@ text {
 .MuiPaper-elevation1 {
   box-shadow: unset !important;
 }
+
+.MuiChip-avatarColorPrimary {
+  width: 50px !important;
+}
