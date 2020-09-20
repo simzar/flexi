@@ -15,19 +15,14 @@ import {
 const LineChart = ({ data }) => {
   return (
     <Paper>
-      <Chart palette='Harmony Light' title='FlexiCoin price history' dataSource={data}>
+      <Chart palette='Harmony Light' title='FlexiCoin rate per 1kWh' dataSource={data}>
         <CommonSeriesSettings argumentField='year' type='spline'>
           <Point visible={false} color='#61f8aa' hoverMode='allArgumentPoints' />
         </CommonSeriesSettings>
-        <Series
-          argumentField='hour'
-          valueField='price'
-          name='FlexiCoin rate per 1kWh'
-          color='#1937d4'
-        />
+        <Series argumentField='hour' valueField='price' name='' color='#1937d4' />
         <Margin bottom={20} />
         <ArgumentAxis valueMarginsEnabled={false} />
-        <Legend verticalAlignment='bottom' horizontalAlignment='center' />
+        <Legend verticalAlignment='bottom' horizontalAlignment='center' visible={false} />
       </Chart>
     </Paper>
   );

@@ -104,6 +104,8 @@ const initialData = [
 export default () => {
   const [idx, setIdx] = useState(22);
   const [data, setData] = useState(initialData);
+  const [balance, setBalance] = useState(17);
+  const [consumption] = useState(10);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -116,17 +118,21 @@ export default () => {
       ];
 
       setData(newData.slice(-10));
+      if (idx % 3 === 0) {
+        setBalance(balance + prices[idx]);
+      }
+
       setIdx((idx + 1) % 24);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [data, idx]);
+  }, [data, idx, balance]);
 
   return (
     <>
       <Card
         header='Balance'
-        text={<Chip avatar={<Avatar>520</Avatar>} label='Flexicoin' color='primary' />}
+        text={<Chip avatar={<Avatar>{balance}</Avatar>} label='Flexicoin' color='primary' />}
       />
       <Card
         header='Rate per 1kWh'
@@ -137,6 +143,10 @@ export default () => {
             color='primary'
           />
         }
+      />
+      <Card
+        header='Current consumption'
+        text={<Chip avatar={<Avatar>{consumption}</Avatar>} label='kWh' color='primary' />}
       />
       <div>
         <LineChart data={data} />

@@ -62,3 +62,7 @@ text {
   font-size: 20px !important;
   font-weight: 500 !important;
 }
+
+.MuiPaper-elevation1 {
+  box-shadow: unset !important;
+}
