@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'fixed',
     height: '100%',
-    width: '40%',
+    width: '60%',
     zIndex: 10,
   },
   tabs: {
@@ -55,10 +55,8 @@ const VerticalNavBar = (props) => {
         className={classes.tabs}
       >
         <Link to='/wallet' classes={classes.link} onClick={props.onClick}>
-          <div>
-            <AccountBalanceWalletTwoToneIcon />
-            <Tab label='Wallet' {...a11yProps(0)} />
-          </div>
+          <AccountBalanceWalletTwoToneIcon />
+          <Tab label='Wallet' {...a11yProps(0)} />
         </Link>
         <Link to='/devices' classes={classes.link} onClick={props.onClick}>
           <RadioTwoToneIcon />
