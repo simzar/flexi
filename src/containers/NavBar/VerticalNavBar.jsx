@@ -46,27 +46,29 @@ const VerticalNavBar = (props) => {
 
   return (
     <div className={classes.root}>
-      <Tabs
-        orientation='vertical'
-        variant='scrollable'
-        value={value}
-        onChange={handleChange}
-        aria-label='Vertical tabs example'
-        className={classes.tabs}
-      >
-        <Link to='/wallet' classes={classes.link} onClick={props.onClick}>
-          <AccountBalanceWalletTwoToneIcon />
-          <Tab label='Wallet' {...a11yProps(0)} />
-        </Link>
-        <Link to='/devices' classes={classes.link} onClick={props.onClick}>
-          <RadioTwoToneIcon />
-          <Tab label='Devices' {...a11yProps(1)} />
-        </Link>
-        <Link to='/prizes' classes={classes.link} onClick={props.onClick}>
-          <StorefrontTwoToneIcon />
-          <Tab label='Prizes' {...a11yProps(1)} />
-        </Link>
-      </Tabs>
+      <div id='linksWrapper'>
+        <Tabs
+          orientation='vertical'
+          variant='scrollable'
+          value={value}
+          onChange={handleChange}
+          aria-label='Vertical tabs example'
+          className={classes.tabs}
+        >
+          <Link to='/wallet' classes={classes.link} onClick={props.onClick}>
+            <AccountBalanceWalletTwoToneIcon />
+            <Tab label='Wallet' {...a11yProps(0)} />
+          </Link>
+          <Link to='/devices' classes={classes.link} onClick={props.onClick}>
+            <RadioTwoToneIcon />
+            <Tab label='Devices' {...a11yProps(1)} />
+          </Link>
+          <Link to='/prizes' classes={classes.link} onClick={props.onClick}>
+            <StorefrontTwoToneIcon />
+            <Tab label='Prizes' {...a11yProps(1)} />
+          </Link>
+        </Tabs>
+      </div>
     </div>
   );
 };

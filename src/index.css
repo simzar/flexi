@@ -10,7 +10,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.MuiTab-wrapper {
+#linksWrapper .MuiTab-wrapper {
   margin: 30px 0;
   font-size: 18px;
 }
@@ -23,7 +23,12 @@ a.hover {
   background-color: darkgrey;
 }
 
-svg.MuiSvgIcon-root {
+#linksWrapper svg.MuiSvgIcon-root {
   font-size: 18px;
   align-self: flex-start;
+}
+
+.MuiListItemIcon-root {
+  display: flex;
+  justify-content: flex-end;
 }

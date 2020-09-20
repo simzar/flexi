@@ -71,11 +71,11 @@ text {
   width: 50px !important;
 }
 
-.MuiTabs-flexContainerVertical > a {
+#linksWrapper .MuiTabs-flexContainerVertical > a {
   display: flex;
 }
 
-.MuiTabs-flexContainerVertical > a > svg {
+#linksWrapper .MuiTabs-flexContainerVertical > a > svg {
   margin: auto 0 auto 10px;
   padding-bottom: 2px;
 }
