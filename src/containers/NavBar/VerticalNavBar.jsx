@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'fixed',
     height: '100%',
-    width: '60%',
+    width: '40%',
     zIndex: 10,
   },
   tabs: {
