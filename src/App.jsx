@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className='App'>
       <Menu onClick={() => setIsMenuOpen(!isMenuOpen)} />
-      {isMenuOpen && <VerticalNavBar />}
+      {isMenuOpen && <VerticalNavBar onClick={() => setIsMenuOpen(false)} />}
 
       <Switch>
         <Route exact path='/'>

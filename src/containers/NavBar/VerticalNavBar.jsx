@@ -17,15 +17,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
     position: 'absolute',
-    height: 224,
+    height: '100%',
+    width: '80%',
     zIndex: 10,
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
+    width: '100%',
   },
 }));
 
-const VerticalNavBar = () => {
+const VerticalNavBar = (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -43,11 +45,10 @@ const VerticalNavBar = () => {
         aria-label='Vertical tabs example'
         className={classes.tabs}
       >
-        <Link to='/wallet'>
+        <Link to='/wallet' onClick={props.onClick}>
           <Tab label='Wallet' {...a11yProps(0)} />
         </Link>
-
-        <Link to='/prizes'>
+        <Link to='/prizes' onClick={props.onClick}>
           <Tab label='Prizes' {...a11yProps(1)} />
         </Link>
 
