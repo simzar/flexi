@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'fixed',
     height: '100%',
-    width: '60%',
+    width: '40%',
     zIndex: 10,
   },
   tabs: {
@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100%',
     textAlign: 'center',
+  },
+  link: {
+    display: 'flex',
   },
 }));
 
@@ -51,15 +54,17 @@ const VerticalNavBar = (props) => {
         aria-label='Vertical tabs example'
         className={classes.tabs}
       >
-        <Link to='/wallet' onClick={props.onClick}>
-          <AccountBalanceWalletTwoToneIcon />
-          <Tab label='Wallet' {...a11yProps(0)} />
+        <Link to='/wallet' classes={classes.link} onClick={props.onClick}>
+          <div>
+            <AccountBalanceWalletTwoToneIcon />
+            <Tab label='Wallet' {...a11yProps(0)} />
+          </div>
         </Link>
-        <Link to='/devices' onClick={props.onClick}>
+        <Link to='/devices' classes={classes.link} onClick={props.onClick}>
           <RadioTwoToneIcon />
           <Tab label='Devices' {...a11yProps(1)} />
         </Link>
-        <Link to='/prizes' onClick={props.onClick}>
+        <Link to='/prizes' classes={classes.link} onClick={props.onClick}>
           <StorefrontTwoToneIcon />
           <Tab label='Prizes' {...a11yProps(1)} />
         </Link>

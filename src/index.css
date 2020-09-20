@@ -12,9 +12,18 @@ code {
 
 .MuiTab-wrapper {
   margin: 30px 0;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 a {
   text-decoration: none;
+}
+
+a.hover{
+  background-color: darkgrey;
+}
+
+svg.MuiSvgIcon-root {
+  font-size: 24px;
+  align-self: flex-start;
 }
