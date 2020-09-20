@@ -111,7 +111,7 @@ const currentConsumption = () => {
 export default () => {
   const [idx, setIdx] = useState(22);
   const [data, setData] = useState(initialData);
-  const [balance, setBalance] = useState(17);
+  const [balance, setBalance] = useState(500);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -153,13 +153,7 @@ export default () => {
       <Card
         header='Current consumption'
         color='primary'
-        text={
-          <Chip
-            avatar={<Avatar>{currentConsumption()}</Avatar>}
-            label='FlexiCoin'
-            color='primary'
-          />
-        }
+        text={<Chip avatar={<Avatar>{currentConsumption()}</Avatar>} label='kWh' color='primary' />}
       />
       <div>
         <LineChart data={data} />
