@@ -51,8 +51,7 @@ const VerticalNavBar = (props) => {
         <Link to='/prizes' onClick={props.onClick}>
           <Tab label='Prizes' {...a11yProps(1)} />
         </Link>
-
-        <Link to='/devices'>
+        <Link to='/devices' onClick={props.onClick}>
           <Tab label='Devices' {...a11yProps(1)} />
         </Link>
       </Tabs>
