@@ -38,7 +38,7 @@ export default function Menu(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' className={classes.title}>
-            Menu
+            Flexitis
           </Typography>
         </Toolbar>
       </AppBar>
